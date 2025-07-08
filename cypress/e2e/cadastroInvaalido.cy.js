@@ -3,8 +3,6 @@ describe('E2E-002 - Cadastro de veículo inválido', () => {
     cy.visit('/veiculos');
     cy.contains('Adicionar Veículo').click();
     cy.get('form').submit();
-
-    // Como não há validação visível, só testamos se o modal permanece
     cy.get('form').should('exist');
   });
 });
